@@ -13,10 +13,10 @@ pipeline {
        sh 'mvn clean install'
      }
    }
-   stage('Docker Build') {
+   stage('sudo Docker Build') {
      agent any
      steps {
-       sh 'docker build -t shanem/spring-petclinic:latest .'
+       sh 'sudo docker build -t website78 .'
      }
    }
  }
