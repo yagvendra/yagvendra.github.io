@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t website8:v1 .'
+				sh 'docker build -t website8 .'
 			}
 		}
 
@@ -25,7 +25,8 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push website8:v1'
+			        sh'docker tag website8 yagvendrathakur/hello'
+				sh 'docker push yagvendrathakur/hello'
 			}
 		}
 	}
