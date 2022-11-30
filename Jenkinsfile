@@ -16,7 +16,7 @@ pipeline {
    stage('sudo Docker Build') {
      agent any
      steps {
-       sh 'sudo docker build -t website .'
+       sh 'docker build -t website .'
      }
    }
  }
